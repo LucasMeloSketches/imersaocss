@@ -1,9 +1,50 @@
+/* soft reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('https://sepsbq.bn.files.1drv.com/y4mHLIPcB5AxdHoIM3fPesAC4CtNzduA5t4p-Nqj2gWVdPYuNFR9AhCjxKqkz5fmJhn_G9FxUDeJii74lMJ48NsttDMA-wgvC_tD5Nxt0PzTlw-5aS_x-y9Hrd8nGp-OYf2RllL-9av0k851u2xQt9Vo6TnoL_3uz_ZLzEoNmge0iJKJ_TyK4THVDETjp-SZqMpgozVbXoXXCXvd7fTDrGhJw/004%20-%2018-02-2020%20cenario%20caverna.png?psid=1');
-    background-size: 100vw auto;
-    font-family: Verdana;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Itim', cursive;
+    font-size: 12px;
 }
-  
+
+/* se a tela tiver pelo menos 400px vai carregar esses estilos */
+@media (min-width: 460px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* breakpoint */
+@media (min-width: 700px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 22px;
+        background-attachment: scroll;
+    }
+}
+
+h2 {
+    font-family: 'Londrina Solid', cursive;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 a {
     color: teal;
     text-decoration: none;
@@ -12,11 +53,63 @@ a {
 a:hover {
     text-decoration: underline;
 }
-  
-.menu {
-    background-color: #00EEEE
+
+.portfolio {
+    padding: 2em;
+    background-image: linear-gradient(rgb(66, 49, 77), rgb(148, 110, 146));
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.portfolio h2 {
+    font-size: 2em;
+    color: rgb(29, 230, 244);
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 1em;
+}
+
+@media (min-width: 460px) {
+    .portfolio .grid {
+       grid-template-columns: 40vw 40vw;
+       justify-content: center;
+       align-content: space-around;
+       min-height: calc(100vh - 43px - 1em - 4em);
+    }
+}
+
+@media (min-width: 700px) {
+    .portfolio .grid {
+       grid-template-columns: 27vw 27vw 27vw;       
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio .grid {
+       grid-template-columns: 324px 324px 324px;       
+    }
+}
+
+.portfolio figure {
+    text-align: center;
 }
   
+.menu {
+    background-color: rgb(29, 230, 244);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+}
+
 .menu ul {
     display: flex;
     justify-content: space-around;
@@ -31,7 +124,49 @@ a:hover {
     color: whitesmoke;
     text-align: center;
 }
-  
+
+.site-title {
+    font-family: 'Londrina Sketch', cursive;
+    margin-bottom: 0.2em;
+    font-size: 5em;
+    line-height: 0.8em;
+    text-shadow: -6px -6px 0 rgb(66, 49, 77),  
+                 6px -6px 0 rgb(66, 49, 77),
+                 -6px 6px 0 rgb(66, 49, 77),
+                 6px 6px 0 rgb(66, 49, 77),
+                 -2px -2px 0 rgb(66, 49, 77),  
+                 2px -2px 0 rgb(66, 49, 77),
+                 -2px 2px 0 rgb(66, 49, 77),
+                 2px 2px 0 rgb(66, 49, 77),
+                 -9px 7px 0 whitesmoke,
+                 -12px 10px 0 whitesmoke;
+}
+
 .site-subtitle {
-    font-style: italic
+    font-family: 'Norican', cursive;
+    font-weight: normal;
+}
+
+.img-portfolio {
+    height: 80vw;
+    width: 80vw;
+    object-fit: cover;
+}
+
+@media (min-width: 460px) {
+    .img-portfolio {
+        height: 40vw;
+        width: 40vw;
+}
+
+@media (min-width: 700px) {
+    .img-portfolio {
+        height: 27vw;
+        width: 27vw;
+}
+
+@media (min-width: 1200px) {
+    .img-portfolio {
+        height: 324px;
+        width: 324px;
 }
